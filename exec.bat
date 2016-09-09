@@ -1,1 +1,0 @@
-start "" "%ProgramFiles%\Git\bin\bash.exe" --login
