@@ -232,5 +232,7 @@ a:hover, a:focus {
 }
 
 [class^="btn"] > span {
+  padding-left: .5rem;
   font-size: 1rem;
+  text-transform: uppercase;
 }
