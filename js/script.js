@@ -144,9 +144,7 @@
     return Math.floor(Math.random() * (max - min + 1)) + min;
   };
 
-  // Apresenta uma citação
-  function showOneQuote(i) {
-    console.log('called');
+  function quotePattern(i) {
     var pattern = '<blockquote class="blockquote">'+
       '<p class="blockquote__phrase">'+quotes[i].phrase+'</p>'+
       '<footer class="blockquote__footer">'+
@@ -158,18 +156,43 @@
         '<span class="blockquote__annotation">'+quotes[i].context+'</span>'+
       '</footer>'+
     '</blockquote>';
+
+    return pattern;
+  }
+
+  // Apresenta uma citação
+  function showOneQuote(i) {
+    var oneQuote = quotePattern(i);
     
-    $('#article blockquote').remove();
-    $('#article').append(pattern);
+    $('#article .blockquote').remove();
+    $('#article').append(oneQuote);
   };
 
+  // Injeta todas as citações no modal
+  function showAllQuotes() {
+    for(var i = 0; i < quotes.length; i++) {
+      $('#modalBody').append(quotePattern(i));
+    };
+  }
+
+  // CTA - Apresenta uma nova citação
   document.querySelector('#buttonViewOther').addEventListener('click', function(ev) {
     showOneQuote(getRandomIntInclusive(0, quotes.length));
   }, false);
 
+  // Inicializa funções que apresentam citações
   showOneQuote(getRandomIntInclusive(0, quotes.length));
+  showAllQuotes();
 
-  // Apresenta todas as citações
+
+  // Modal
+  var modal = document.querySelector('#modal');
+  document.querySelector('#buttonViewAll').addEventListener('click', function() {
+    modal.style.display = 'block';
+  });
+  document.querySelector('#modalClose').addEventListener('click', function() {
+    modal.style.display = 'none';
+  });
   
   
   // Verifica as teclas pressionadas e retorna uma função caso combine com o pattern
