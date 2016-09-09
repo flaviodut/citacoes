@@ -288,6 +288,12 @@ a:hover, a:focus {
   border-radius: 5px;
 }
 
+.keyboard__key--active {
+  color: #fff;
+  background-color: #999;
+  border: 1px solid #999;
+}
+
 
 /* Buttons */
 

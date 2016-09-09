@@ -202,10 +202,16 @@
   document.addEventListener('keydown', function(ev) {
     var keycode = ev.keyCode;
     var keypos = wordPattern.indexOf(keycode);
+    var keyhtml = document.querySelectorAll('.keyboard__key');
     
     if (keypos >= 0) { // keycode existe em word
       if (keypos === wordMirror.length) {
         wordMirror.push(keycode);
+
+        var keyhtmlClass = keyhtml[wordMirror.length - 1].getAttribute('class');
+        keyhtmlClass = keyhtmlClass + ' keyboard__key--active';
+        keyhtml[wordMirror.length - 1].setAttribute('class',keyhtmlClass);
+
         if (wordMirror.length === 6) {
           console.log('now i call a function');
         }
