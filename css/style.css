@@ -265,36 +265,6 @@ a:hover, a:focus {
 }
 
 
-/* Keyboard keys */
-
-.keyboard {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100vh;
-
-  display: flex;
-  align-items: center;
-}
-
-.keyboard__key {
-  width: 2rem;
-  line-height: 2rem;
-  margin: .5rem;
-  color: #ccc;
-  text-align: center;
-  background-color: #fff;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-.keyboard__key--active {
-  color: #fff;
-  background-color: #999;
-  border: 1px solid #999;
-}
-
-
 /* Buttons */
 
 [class^="btn"], [class^="btn"]:focus {
