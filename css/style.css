@@ -1,0 +1,236 @@
+@charset 'UTF-8';
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font: 400 1rem/1.4 'Roboto', sans-serif;
+  color: #666;
+  background-color: #fafafa;
+}
+
+img { 
+  width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+a, a:active {
+  color: #008EAE;
+  text-decoration: none;
+}
+
+a:hover, a:focus {
+  color: cadetblue;
+}
+
+
+/* Icomoon */
+
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?2zr9yp');
+  src:  url('fonts/icomoon.eot?2zr9yp#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?2zr9yp') format('truetype'),
+    url('fonts/icomoon.woff?2zr9yp') format('woff'),
+    url('fonts/icomoon.svg?2zr9yp#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-globe:before {
+  content: "\e045";
+}
+.icon-refresh:before {
+  content: "\e05a";
+}
+
+
+/* Header */
+
+.header {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  padding-top: calc(1rem + 20px);
+  padding-bottom: 1rem;
+  text-align: center;
+}
+
+.title {
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
+  color: #B3BDC9;
+}
+
+.logo {
+  display: inline-block;
+  width: 10rem;
+  margin-top: -20px;
+}
+
+.nav {
+}
+
+.nav li {
+  display: inline-block;
+}
+
+
+/* Footer */
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  height: 3rem;
+  font-size: .875rem;
+  text-align: center;
+}
+
+.footer > p {
+  line-height: 3rem;
+  border-top: 1px solid #efefef;
+}
+
+
+/* Blockquote */
+
+.article {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  padding: 5rem 0;
+}
+
+.blockquote {
+  width: 600px;
+  font-family: 'Lora', serif;
+  text-align: right;
+}
+
+.blockquote__phrase {
+  position: relative;
+  margin-bottom: 1rem;
+  padding: 1.5rem;
+  font-size: 1.5rem;
+  font-style: italic;
+  text-align: left;
+  text-indent: 80px;
+  background-color: white;
+  border-radius: .75rem;
+  box-shadow: 0 5px 20px rgba(0,0,0,.15);
+}
+
+.blockquote__phrase::before {
+  content: '“';
+  position: absolute;
+  top: 80px;
+  left: -80px;
+  font-size: 15rem;
+  line-height: 0;
+  color: #ccc;
+}
+
+.blockquote__phrase::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  right: 1.5rem;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 8px 7.5px 0 7.5px;
+  border-color: #fff transparent transparent transparent;
+}
+
+.blockquote__footer {
+  padding-left: .5rem;
+  padding-right: .5rem;
+}
+
+.blockquote__whosaid {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.blockquote__whosaid > span {
+  margin-right: .5rem;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.blockquote__whosaid > img {
+  width: 50px;
+  padding: 3px;
+  background-color: white;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0,0,0,.25);
+}
+
+.blockquote__date {
+  display: block;
+  font-size: .75rem;
+}
+
+.blockquote__annotation {
+  display: block;
+  font-size: .75rem;
+}
+
+
+/* Buttons */
+
+[class^="btn"], [class^="btn"]:focus {
+  display: block;
+  margin-left: .5rem;
+  margin-right: .5rem;
+  padding: 0.8rem 1.2rem;
+  color: #008EAE;
+  border: 1px solid #008EAE;
+  transition: all 150ms ease-in-out;
+}
+
+[class^="btn"]:hover {
+  color: #fff;
+  background-color: #008EAE;
+}
+
+[class^="btn"] * {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+[class^="btn"] > i {
+  font-size: 1.5rem;
+}
+
+[class^="btn"] > span {
+  font-size: 1rem;
+}

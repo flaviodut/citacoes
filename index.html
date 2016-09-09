@@ -6,31 +6,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Citações</title>
 
-    <!-- FONTAWESOME CDN -->
-    <script src="//use.fontawesome.com/c5011e9f4f.js"></script>
-    <!-- GOOGLE FONTS -->
-    <link href="//fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link href="//fonts.googleapis.com/css?family=Lora:400,400i,700,700i|Roboto:400" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
   </head>
   <body>
 
-    <article>
-      <blockquote>
-        <p>My favorite book is At Swim-Two-Birds</p>
-        <footer>
-          <cite>Mike[tm]Smith</cite>
-          <span class="date">01/01/2016 ás 11h60</span>
-          <span class="annotation">annotation</span>
-        </footer>
-      </blockquote>
+    <header id="header" class="header">
+      <h1 class="title"><img class="logo" src="img/logo_hfocus_branco.svg" alt="Logo HFocus"> Citações</h1>
+      <nav id="nav" class="nav">
+        <ul>
+          <li>
+            <a id="buttonViewOther" class="btn__view-other" href="javascript:;" title="Ver outra citação">
+              <i class="icon-refresh"></i>
+              <span>Ver outra</span>
+            </a>
+          </li>
+          <li>
+            <a id="buttonViewAll" class="btn__view-all" href="javascript:;" title="Ver todos as ">
+              <i class="icon-globe"></i>
+              <span>Ver todas</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    
 
-      <a class="btn-reload" href="javascript:;" title="Atualizar">
-        <i class="fa fa-refresh"></i>
-        <span>Atualizar</span>
-      </a>
+    <article id="article" class="article">
+      <!-- <blockquote class="blockquote">
+        <p class="blockquote__phrase">My favorite book is At Swim-Two-Birds</p>
+        <footer>
+          <cite class="blockquote__whosaid">
+            <span>Mike[tm]Smith</span>
+            <img src="./img/person-1.jpg" alt="Avatar do person-1">
+          </cite>
+          <span class="blockquote__date">01/01/2016 ás 11h60</span>
+          <span class="blockquote__annotation">annotation</span>
+        </footer>
+      </blockquote> -->
     </article>
 
-    <script src="//cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.min.js" async></script>
-    <script src="./js/quotes.js" async></script>
-    <script src="./js/script.js" async></script>
+    <footer id="footer" class="footer">
+      <p>Citações coletadas por <a href="http://www.flaviodutra.com.br/">Flávio Dutra</a>. Produzido por <a href="http://www.flaviodutra.com.br/">Flávio Dutra</a>.</p>
+    </footer>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.min.js"></script>
+    <script src="./js/script.js"></script>
   </body>
 </html>
