@@ -199,6 +199,7 @@
   //var wordPattern = [68,65,78,71,69,82]; // danger
   var wordPattern = [90,69,90,73,77]; // zezim
   var wordMirror = [];
+  var zezim = document.querySelector('#zezim');
   
   document.addEventListener('keydown', function(ev) {
     var keycode = ev.keyCode;
@@ -208,12 +209,18 @@
       if (keycode === wordPattern[wordMirror.length]) {
         wordMirror.push(keycode);
         if (wordMirror.length === wordPattern.length) {
-          console.log('now i call a function');
+          zezim.style.display = 'flex';
         }
       }
     } else {
       wordMirror = []; // reset
     }
+  });
+
+  zezim.addEventListener('click', function(ev) {
+    //console.log(ev, this)
+    this.style.display = 'none';
+    wordMirror = []; // reset
   });
 
 }());
