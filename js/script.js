@@ -196,18 +196,18 @@
   
   
   // Verifica as teclas pressionadas e retorna uma função caso combine com o pattern
-  var wordPattern = [68,65,78,71,69,82]; // danger
+  //var wordPattern = [68,65,78,71,69,82]; // danger
+  var wordPattern = [90,69,90,73,77]; // zezim
   var wordMirror = [];
   
   document.addEventListener('keydown', function(ev) {
     var keycode = ev.keyCode;
     var keypos = wordPattern.indexOf(keycode);
-    var keyhtml = document.querySelectorAll('.keyboard__key');
     
     if (keypos >= 0) { // keycode existe em word
-      if (keypos === wordMirror.length) {
+      if (keycode === wordPattern[wordMirror.length]) {
         wordMirror.push(keycode);
-        if (wordMirror.length === 6) {
+        if (wordMirror.length === wordPattern.length) {
           console.log('now i call a function');
         }
       }
