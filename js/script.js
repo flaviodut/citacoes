@@ -177,11 +177,13 @@
 
   // CTA - Apresenta uma nova citação
   document.querySelector('#buttonViewOther').addEventListener('click', function(ev) {
-    showOneQuote(getRandomIntInclusive(0, quotes.length));
+    var randomNumber = getRandomIntInclusive(0, quotes.length);
+    showOneQuote(randomNumber);
   }, false);
 
   // Inicializa funções que apresentam citações
-  showOneQuote(getRandomIntInclusive(0, quotes.length));
+  var randomNumber = getRandomIntInclusive(0, quotes.length);
+  showOneQuote(randomNumber);
   showAllQuotes();
 
 
