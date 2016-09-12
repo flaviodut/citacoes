@@ -165,7 +165,7 @@
     var article = document.querySelector('#article');
     var oneQuote = quotePattern(i);
     article.innerHTML = oneQuote;
-  };
+  }
 
   // Injeta todas as citações no modal
   function showAllQuotes() {
@@ -211,7 +211,7 @@
     nyanCat.play();
     zezim.style.display = 'flex';
     nyanCat.addEventListener('ended', zezimContentReset, false);
-  };
+  }
 
   // Remove e reseta o conteúdo do Zezim
   function zezimContentReset() {
@@ -219,7 +219,7 @@
     nyanCat.currentTime = 0;
     zezim.style.display = 'none';
     wordMirror = []; // reset
-  };
+  }
   
   document.addEventListener('keydown', function(ev) {
     var keycode = ev.keyCode;
