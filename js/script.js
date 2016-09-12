@@ -137,12 +137,12 @@
       },
   ];
 
-  // Returns a random integer between min (included) and max (included)
-  function getRandomIntInclusive(min, max) {
+  // Using Math.round() will give you a non-uniform distribution!
+  function getRandomInt(min, max) {
     min = Math.ceil(min);
     max = Math.floor(max);
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-  };
+    return Math.floor(Math.random() * (max - min)) + min;
+  }
 
   function quotePattern(i) {
     var pattern = '<blockquote class="blockquote">'+
@@ -177,12 +177,12 @@
 
   // CTA - Apresenta uma nova citação
   document.querySelector('#buttonViewOther').addEventListener('click', function(ev) {
-    var randomNumber = getRandomIntInclusive(0, quotes.length);
+    var randomNumber = getRandomInt(0, quotes.length);
     showOneQuote(randomNumber);
   }, false);
 
   // Inicializa funções que apresentam citações
-  var randomNumber = getRandomIntInclusive(0, quotes.length);
+  var randomNumber = getRandomInt(0, quotes.length);
   showOneQuote(randomNumber);
   showAllQuotes();
 
