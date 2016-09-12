@@ -202,6 +202,20 @@
   var wordPattern = [90,69,90,73,77]; // zezim
   var wordMirror = [];
   var zezim = document.querySelector('#zezim');
+  var nyanCat = document.querySelector('#nyanCat');
+
+  function zezimContent() {
+    nyanCat.play();
+    zezim.style.display = 'flex';
+    nyanCat.addEventListener('ended', zezimContentReset, false);
+  };
+
+  function zezimContentReset() {
+    nyanCat.pause();
+    nyanCat.currentTime = 0;
+    zezim.style.display = 'none';
+    wordMirror = []; // reset
+  };
   
   document.addEventListener('keydown', function(ev) {
     var keycode = ev.keyCode;
@@ -211,7 +225,7 @@
       if (keycode === wordPattern[wordMirror.length]) {
         wordMirror.push(keycode);
         if (wordMirror.length === wordPattern.length) {
-          zezim.style.display = 'flex';
+          zezimContent();
         }
       }
     } else {
@@ -219,10 +233,6 @@
     }
   });
 
-  zezim.addEventListener('click', function(ev) {
-    //console.log(ev, this)
-    this.style.display = 'none';
-    wordMirror = []; // reset
-  });
+  zezim.addEventListener('click', zezimContentReset, false);
 
 }());
