@@ -198,18 +198,19 @@
   
   
   // Verifica as teclas pressionadas e retorna uma função caso combine com o pattern
-  //var wordPattern = [68,65,78,71,69,82]; // danger
   var wordPattern = [90,69,90,73,77]; // zezim
   var wordMirror = [];
   var zezim = document.querySelector('#zezim');
   var nyanCat = document.querySelector('#nyanCat');
 
+  // Exibe o conteúdo do Zezim
   function zezimContent() {
     nyanCat.play();
     zezim.style.display = 'flex';
     nyanCat.addEventListener('ended', zezimContentReset, false);
   };
 
+  // Remove e reseta o conteúdo do Zezim
   function zezimContentReset() {
     nyanCat.pause();
     nyanCat.currentTime = 0;
