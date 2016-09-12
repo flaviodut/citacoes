@@ -160,19 +160,22 @@
     return pattern;
   }
 
-  // Apresenta uma citação
+  // Apresenta uma citação no article
   function showOneQuote(i) {
+    var article = document.querySelector('#article');
     var oneQuote = quotePattern(i);
-    
-    $('#article .blockquote').remove();
-    $('#article').append(oneQuote);
+    article.innerHTML = oneQuote;
   };
 
   // Injeta todas as citações no modal
   function showAllQuotes() {
+    var modalBody = document.querySelector('#modalBody');
+    var allQuotes = []; 
     for(var i = 0; i < quotes.length; i++) {
-      $('#modalBody').append(quotePattern(i));
+      allQuotes.push(quotePattern(i));
     };
+    var allQuotesClean = allQuotes.join('');
+    modalBody.innerHTML = allQuotesClean;
   }
 
   // CTA - Apresenta uma nova citação
