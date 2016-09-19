@@ -135,6 +135,13 @@
           'avatar': '1',
           'context': 'Com terror em seus olhos, relembrando o 7 à 1 da Alemanha em cima do Brasil.'
       },
+      {
+          'phrase': 'Não Zé, eu não vou fazer, não dá! Eu tenho que fazer minha mudança amanhã. Não dá! Zé, não dá! Eu não vou fazer isso pra você amanhã!',
+          'date': '16/09/2016 às 20h17',
+          'whosaid': 'Henrique De Simone',
+          'avatar': '2',
+          'context': 'Henrique gritando com o Zé no telefone tentando explicar que não ia ter tempo ábil pra fazer uma tarefa.'
+      }
   ];
 
   // Using Math.round() will give you a non-uniform distribution!
