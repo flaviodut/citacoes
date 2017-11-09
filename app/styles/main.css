@@ -83,7 +83,6 @@ a:hover, a:focus {
   flex-direction: column;
 
   width: 100vw;
-  padding-top: 2rem;
   text-align: center;
 }
 
@@ -138,7 +137,7 @@ a:hover, a:focus {
   
   width: 100vw;
   height: 100vh;
-  padding: 18rem 0 1rem;
+  padding: 15rem 0 1rem;
 }
 
 .blockquote {
