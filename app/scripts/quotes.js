@@ -13,7 +13,7 @@
     'Jamal', // 9
     'Ana', // 10
     'Rodrigo', // 11
-    'Julia' // 12
+    'Julia', // 12
     'Lorena' // 13
   ];
 
@@ -241,6 +241,13 @@
         'whosaid': whosaid[6],
         'avatar': 6,
         'context': 'Reclamando sobre a dicção do Jamal.'
+      },
+      {
+        'phrase': 'Vem flutuando então.',
+        'date': '09/11/2017 às 13h27',
+        'whosaid': whosaid[6],
+        'avatar': 6,
+        'context': 'Depois que a Cris falou que perdeu a pontinha do sapato enquanto andava.'
       }
   ];
 

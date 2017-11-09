@@ -122,8 +122,6 @@ a:hover, a:focus {
 
 .footer > p {
   margin: 0;
-  transform: rotate(-90deg);
-  transform-origin: 50% -500%;
 }
 
 
@@ -266,7 +264,7 @@ a:hover, a:focus {
 
 .modal__body {
   height: 100%;
-  padding: 2rem 1rem 1rem;
+  padding: 3rem 3rem 0;
   overflow: auto;
 }
 
