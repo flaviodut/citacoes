@@ -14,7 +14,8 @@
     'Ana', // 10
     'Rodrigo', // 11
     'Julia', // 12
-    'Lorena' // 13
+    'Lorena', // 13
+    'Leandro' // 14
   ];
 
   const quotes = [
@@ -173,7 +174,7 @@
         'context': 'Sobre uma dúvida da cliente que recebe as bases e não sabe calcular os dados.'
       },
       {
-        'phrase': 'Posso até te oferecer mágica agora, mas como vc sabe, mágica é só ilusão.',
+        'phrase': 'Posso até te oferecer mágica agora, mas como você sabe, mágica é só ilusão.',
         'date': '10/10/2016 às 17h07',
         'whosaid': whosaid[3],
         'avatar': 3,
@@ -229,7 +230,7 @@
         'context': 'Em call reclamando do som alto.'
       },
       {
-        'phrase': 'Depois que vc mata um leão, já tem outro cutucando a sua bunda com a unha, tem que correr mais rápido.',
+        'phrase': 'Depois que você mata um leão, já tem outro cutucando a sua bunda com a unha, tem que correr mais rápido.',
         'date': '05/07/2017 às 17h40',
         'whosaid': whosaid[3],
         'avatar': 3,
@@ -248,6 +249,20 @@
         'whosaid': whosaid[6],
         'avatar': 6,
         'context': 'Depois que a Cris falou que perdeu a pontinha do sapato enquanto andava.'
+      },
+      {
+        'phrase': 'Na hora que chove pica, todo mundo quer tirar o seu da reta.',
+        'date': '22/11/2017 às 11h58',
+        'whosaid': whosaid[3],
+        'avatar': 3,
+        'context': 'Conversando com o José a respeito de uma consulta errada que o cliente estava fazendo no colector.'
+      },
+      {
+        'phrase': 'Se eu fizer no Zezinho, ele vai ficar durinho.',
+        'date': '29/11/2017 às 17h17',
+        'whosaid': whosaid[8],
+        'avatar': 8,
+        'context': 'Depois de retrucar alguma brincadeira que o Henrique fez.'
       }
   ];
 
