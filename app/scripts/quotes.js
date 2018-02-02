@@ -263,6 +263,13 @@
         'whosaid': whosaid[8],
         'avatar': 8,
         'context': 'Depois de retrucar alguma brincadeira que o Henrique fez.'
+      },
+      {
+        'phrase': 'Então, é que eu apaguei julho, e agora que eu estou voltando, o N não está batendo.',
+        'date': '01/02/2018 às 18h55',
+        'whosaid': whosaid[2],
+        'avatar': 2,
+        'context': 'Em conversa com o Henrique sobre o penúltimo pepino que ele está resolvendo.'
       }
   ];
 
