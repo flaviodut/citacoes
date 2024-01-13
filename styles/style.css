@@ -1,0 +1,408 @@
+:root {
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+html, body {
+  width: 100vw;
+  height: 100vh;
+}
+
+body {
+  font: 400 1rem/1.4 'Roboto', sans-serif;
+  color: #666;
+  background-color: #fafafa;
+}
+
+img { 
+  width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+a, a:active {
+  color: #008EAE;
+  text-decoration: none;
+}
+
+a:hover, a:focus {
+  color: cadetblue;
+}
+
+
+/* Icomoon */
+
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?2zr9yp');
+  src:  url('../fonts/icomoon.eot?2zr9yp#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?2zr9yp') format('truetype'),
+    url('../fonts/icomoon.woff?2zr9yp') format('woff'),
+    url('../fonts/icomoon.svg?2zr9yp#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-globe:before {
+  content: "\e045";
+}
+.icon-refresh:before {
+  content: "\e05a";
+}
+
+
+/* Header */
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+
+  display: flex;
+  flex-direction: column;
+
+  width: 100vw;
+  text-align: center;
+}
+
+.logo {
+  width: 8rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.title {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  font-size: 3rem;
+  line-height: 1;
+  color: #B3BDC9;
+}
+
+.nav {
+}
+
+.nav li {
+  display: inline-block;
+}
+
+
+/* Footer */
+
+.footer {
+  position: fixed;
+  bottom: .5rem;
+  right: 1rem;
+  z-index: 100;
+
+  font-size: .875rem;
+}
+
+.footer > p {
+  margin: 0;
+}
+
+
+/* Blockquote */
+
+.article {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  width: 100vw;
+  height: 100vh;
+  padding: 15rem 0 1rem;
+}
+
+.blockquote {
+  width: 600px;
+  font-family: 'Lora', serif;
+  text-align: right;
+}
+
+.blockquote__phrase {
+  position: relative;
+  margin-bottom: 1rem;
+  padding: 1.5rem;
+  font-size: 1.5rem;
+  font-style: italic;
+  text-align: left;
+  text-indent: 80px;
+  background-color: white;
+  box-shadow: 0 5px 20px rgba(0,0,0,.15);
+}
+
+.blockquote__phrase::before {
+  content: '“';
+  position: absolute;
+  top: 80px;
+  left: -80px;
+  font-size: 15rem;
+  line-height: 0;
+  color: #ccc;
+}
+
+.blockquote__phrase::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  right: 1.5rem;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 8px 7.5px 0 7.5px;
+  border-color: #fff transparent transparent transparent;
+}
+
+.blockquote__footer {
+  padding-left: .5rem;
+  padding-right: .5rem;
+}
+
+.blockquote__whosaid {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.blockquote__whosaid > span {
+  margin-right: .5rem;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.blockquote__whosaid > img {
+  width: 50px;
+  padding: 3px;
+  background-color: white;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0,0,0,.25);
+}
+
+.blockquote__date {
+  display: block;
+  font-size: .75rem;
+  font-style: italic;
+}
+
+.blockquote__annotation {}
+
+
+/* Modal */
+
+.modal {
+  display: none;
+}
+
+.modal__overlay {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1100;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,.3);
+}
+
+.modal__content {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1101;
+  width: 60vw;
+  height: 80vh;
+  margin-left: 20vw;
+  margin-top: 10vh;
+  background-color: #fafafa;
+  box-shadow: 0 5px 20px rgba(0,0,0,.3);
+}
+
+.modal__close {
+  position: absolute;
+  top: -2rem;
+  right: -2rem;
+  z-index: 1102;
+  display: block;
+  width: 2rem;
+  line-height: 2rem;
+  text-align: center;
+  background-color: #fff;
+  transition: all 150ms ease-in-out;
+}
+
+.modal__close:hover, .modal__close:focus {
+  color: #fff;
+  background-color: #008EAE;
+}
+
+.modal__body {
+  height: 100%;
+  padding: 3rem 3rem 0;
+  overflow: auto;
+}
+
+.modal .blockquote {
+  width: 100%;
+  margin-bottom: 4rem;
+}
+
+
+/* Easter egg */
+
+.egg {
+  position: fixed;
+  bottom: 1rem;
+  left: 1rem;
+}
+
+.egg__icon {
+  width: 2rem;
+}
+
+.egg__message {
+  position: relative;
+  display: inline-block;
+  margin-left: .5rem;
+  padding: .25rem .5rem;
+  color: #ccc;
+  font-size: .875rem;
+  background-color: #fff;
+  box-shadow: 0 0 20px rgba(0,0,0,.15);
+  opacity: 0;
+  transition: all 150ms ease-in-out;
+}
+
+.egg__message::before {
+  content: '';
+  position: absolute;
+  bottom: 6px;
+  left: -8px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 7.5px 8px 7.5px 0;
+  border-color: transparent #fff transparent transparent;
+}
+
+.egg:hover .egg__message, .egg:focus .egg__message {
+  opacity: 1;
+}
+
+.egg__icon{
+  animation: animationShake linear 5s;
+  animation-iteration-count: infinite;
+  transform-origin: 50% 100%;
+}
+
+@keyframes animationShake{
+  0% {
+  }
+  40% {
+    transform:  rotate(0deg) ;
+  }
+  44% {
+    transform:  rotate(15deg) ;
+  }
+  48% {
+    transform:  rotate(-10deg) ;
+  }
+  52% {
+    transform:  rotate(5deg) ;
+  }
+  56% {
+    transform:  rotate(-5deg) ;
+  }
+  60% {
+    transform:  rotate(0deg) ;
+  }
+  100% {
+  }
+}
+
+
+/* Zezim */
+
+.zezim {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+
+  display: none;
+  justify-content: center;
+  align-items: center;
+
+  width: 100vw;
+  height: 100vh;
+  background: url(../images/banana.gif) center;
+  background-size: cover;
+}
+
+.zezim > img {
+  width: 50%;
+  box-shadow: 0 0 250px rgba(0, 255, 255, .75);
+}
+
+
+/* Buttons */
+
+[class^="btn"], [class^="btn"]:focus {
+  display: block;
+  margin-left: .5rem;
+  margin-right: .5rem;
+  padding: 0.8rem 1.2rem;
+  color: #008EAE;
+  border: 1px solid #008EAE;
+  transition: all 150ms ease-in-out;
+}
+
+[class^="btn"]:hover {
+  color: #fff;
+  background-color: #008EAE;
+}
+
+[class^="btn"] * {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+[class^="btn"] > i {
+  font-size: 1.5rem;
+}
+
+[class^="btn"] > span {
+  padding-left: .5rem;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
