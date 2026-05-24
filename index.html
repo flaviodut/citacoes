@@ -17,8 +17,61 @@
     <meta name="city" content="São Paulo">
     <meta name="country" content="Brasil">
     <link href="//fonts.googleapis.com/css?family=Lora:400,400i,700,700i|Roboto:400" rel="stylesheet">
+    <style>
+      .loading {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 9999;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 100vh;
+        background-color: white;
+      }
+
+      .loading__spinner {
+        width: 50px;
+        height: 50px;
+        animation: spin 1s linear infinite;
+      }
+
+      .loading__circle {
+        stroke-dasharray: 90;
+        stroke-dashoffset: 0;
+        stroke-linecap: round;
+        animation: dash 1.5s ease-in-out infinite;
+      }
+
+      @keyframes spin {
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+      @keyframes dash {
+        0% {
+          stroke-dasharray: 1, 150;
+          stroke-dashoffset: 0;
+        }
+        50% {
+          stroke-dasharray: 90, 150;
+          stroke-dashoffset: -35;
+        }
+        100% {
+          stroke-dasharray: 90, 150;
+          stroke-dashoffset: -124;
+        }
+      }
+    </style>
   </head>
   <body>
+    <div id="loading" class="loading">
+      <svg class="loading__spinner" viewBox="0 0 50 50">
+        <circle class="loading__circle" cx="25" cy="25" r="20" fill="none" stroke="#008EAE" stroke-width="4"></circle>
+      </svg>
+    </div>
     <header id="header" class="header">
       <h1 class="title">&#8220;Citações&#8221;</h1>
       <nav id="nav" class="nav">

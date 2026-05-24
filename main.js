@@ -17,3 +17,11 @@ $buttonModalClose.addEventListener('click', () => $modal.style.display = 'none')
 showOneQuote(getRandomInt(0, quotes.length));
 showAllQuotes();
 zezimMeme();
+
+// Remove loading screen when page is fully loaded
+window.addEventListener('load', () => {
+  const $loading = document.querySelector('#loading');
+  if ($loading) {
+    $loading.style.display = 'none';
+  }
+});
