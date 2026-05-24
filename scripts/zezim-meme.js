@@ -49,6 +49,14 @@ export default function zezimMeme() {
     _handlerKeydown(ev.keyCode);
   }, false);
 
+  // Handler para clicar no ovo (mobile)
+  var _nodeEgg = document.querySelector('#egg');
+  _nodeEgg.addEventListener('click', function() {
+    if (window.innerWidth <= 768) {
+      showContent();
+    }
+  }, false);
+
   // Handler para fechar o meme
   _nodeZezim.addEventListener('click', resetContent, false);
 
